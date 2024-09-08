@@ -102,7 +102,9 @@ export const addPokemon = (pokemon) => async (dispatch) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(pokemon),
+      body: JSON.stringify({
+        pokemon: pokemon,
+      }),
     });
 
     const data = await response.json();
